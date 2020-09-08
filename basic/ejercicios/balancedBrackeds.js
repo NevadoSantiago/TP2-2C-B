@@ -20,6 +20,7 @@ function verificarPar(e,s){
 
 function isBalanced(s) {
     var array = Array.from(s)
+    if(!verificarParidad) return "NO"
     var contador = 0;
     var esIncorrecto = false
     while (contador < array.length && !esIncorrecto) {
@@ -54,6 +55,11 @@ function tamañoArrayApertura(array) {
         }
     }
     return contador
+}
+function verificarParidad(array){
+    if(array.length % 2 != 0){
+        return false;
+    }else return true
 }
 
 
